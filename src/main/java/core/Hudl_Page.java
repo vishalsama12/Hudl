@@ -12,7 +12,7 @@ public class Hudl_Page {
     CucumberPageWrapper  cucumberPageWrapper;
 
     public void visit_Hudl_Homepage(){
-        System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","src/main/resources/chrome_driver/chromedriver.exe");
         cucumberPageWrapper.driver = new ChromeDriver();
         cucumberPageWrapper.driver.get("http://hudl.com/");
         Assert.assertTrue(cucumberPageWrapper.waitForExpectedElement(By.cssSelector("a[data-qa-id='login']")).isDisplayed());
